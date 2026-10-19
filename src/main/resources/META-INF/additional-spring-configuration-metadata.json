@@ -1,0 +1,113 @@
+{
+  "groups": [
+    {
+      "name": "freeswitch.esl",
+      "type": "io.github.qtstack.fsesl.spring.boot.FreeSwitchEslProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "freeswitch.esl.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "Enable the FreeSWITCH ESL auto-configuration."
+    },
+    {
+      "name": "freeswitch.esl.password",
+      "type": "java.lang.String",
+      "description": "Password used when a server has no server-specific password. Required when a server has no password."
+    },
+    {
+      "name": "freeswitch.esl.events",
+      "type": "java.util.List<java.lang.String>",
+      "description": "FreeSWITCH plain events subscribed after authentication."
+    },
+    {
+      "name": "freeswitch.esl.custom-events",
+      "type": "java.util.List<java.lang.String>",
+      "description": "FreeSWITCH CUSTOM event subclasses subscribed after authentication, such as callcenter::info."
+    },
+    {
+      "name": "freeswitch.esl.command-timeout",
+      "type": "java.time.Duration",
+      "defaultValue": "10s",
+      "description": "Maximum time to wait for an ESL command response."
+    },
+    {
+      "name": "freeswitch.esl.connect-timeout",
+      "type": "java.time.Duration",
+      "defaultValue": "5s",
+      "description": "Maximum time to wait for a TCP connection."
+    },
+    {
+      "name": "freeswitch.esl.reconnect-delay",
+      "type": "java.time.Duration",
+      "defaultValue": "5s",
+      "description": "Delay before reconnecting after a connection failure."
+    },
+    {
+      "name": "freeswitch.esl.worker-threads",
+      "type": "java.lang.Integer",
+      "defaultValue": 0,
+      "description": "Netty worker threads; zero uses the runtime default."
+    },
+    {
+      "name": "freeswitch.esl.event-threads",
+      "type": "java.lang.Integer",
+      "defaultValue": 0,
+      "description": "Event listener threads; zero uses the runtime default."
+    },
+    {
+      "name": "freeswitch.esl.event-queue-capacity",
+      "type": "java.lang.Integer",
+      "defaultValue": 4096,
+      "description": "Maximum number of received events waiting for listener threads; zero uses the default."
+    },
+    {
+      "name": "freeswitch.esl.max-header-line-length",
+      "type": "java.lang.Integer",
+      "defaultValue": 8192,
+      "description": "Maximum length of one ESL header line in bytes."
+    },
+    {
+      "name": "freeswitch.esl.max-frame-length",
+      "type": "java.lang.Integer",
+      "defaultValue": 1048576,
+      "description": "Maximum length of an ESL message body in bytes."
+    },
+    {
+      "name": "freeswitch.esl.tcp-no-delay",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Enable TCP_NODELAY on ESL connections."
+    },
+    {
+      "name": "freeswitch.esl.auto-startup",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Start ESL connections automatically with the Spring context."
+    },
+    {
+      "name": "freeswitch.esl.servers",
+      "type": "java.util.List<io.github.qtstack.fsesl.spring.boot.FreeSwitchEslProperties$Server>",
+      "description": "FreeSWITCH ESL servers to connect to."
+    },
+    {
+      "name": "freeswitch.esl.servers[].host",
+      "type": "java.lang.String",
+      "defaultValue": "127.0.0.1",
+      "description": "FreeSWITCH ESL host."
+    },
+    {
+      "name": "freeswitch.esl.servers[].port",
+      "type": "java.lang.Integer",
+      "defaultValue": 8021,
+      "description": "FreeSWITCH ESL port."
+    },
+    {
+      "name": "freeswitch.esl.servers[].password",
+      "type": "java.lang.String",
+      "description": "Password for this server; empty uses the shared password."
+    }
+  ]
+}

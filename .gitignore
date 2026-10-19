@@ -1,0 +1,16 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+*.class
+*.log
+*.tmp
+
+.idea/
+.settings/
+.classpath
+.project
+.vscode/
+
+dependency-reduced-pom.xml
+release.properties
+pom.xml.versionsBackup
