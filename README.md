@@ -183,6 +183,14 @@ mvn test "-Dfreeswitch.esl.it.enabled=true" `
   "-Dfreeswitch.esl.it.password=<password>"
 ```
 
+## Publishing
+
+Releases are published to Maven Central by manually running the [Release workflow]. The workflow
+uses repository secrets for the Central Portal user token and the GPG signing key; no credential is
+stored in the repository.
+
+[Release workflow]: https://github.com/qtstack/freeswitch-esl-spring-boot-starter/actions/workflows/release.yml
+
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
