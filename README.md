@@ -47,7 +47,7 @@ freeswitch:
     event-threads: 0
     event-queue-capacity: 4096
     max-header-line-length: 8192
-    max-frame-length: 1MB
+    max-frame-length: 1048576
     tcp-no-delay: true
     servers:
       - host: 127.0.0.1
